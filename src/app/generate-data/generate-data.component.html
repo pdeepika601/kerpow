@@ -1,11 +1,11 @@
 <header>
     <h1>Generate Test Data</h1>
 </header>
-<mat-horizontal-stepper linear="true" #stepper>
+<mat-horizontal-stepper linear="false" #stepper>
     <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
             <ng-template matStepLabel>Connect To Database</ng-template>
-            <app-connect></app-connect>
+            <app-connect (goForward)="next()"></app-connect>
         </form>
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">

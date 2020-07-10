@@ -1,7 +1,7 @@
 <div>
     <mat-card>
         <mat-card-header>
-            Database Connection
+            Please provide connection details
         </mat-card-header>
         <mat-card-content>
             <div class="row-1">
@@ -25,7 +25,7 @@
             </div>
             <div class="btns">
                 <button mat-button>Test</button>
-                <button mat-button matStepperNext>Connect</button>
+                <button mat-button (click)="next()">Connect</button>
             </div>
 
         </mat-card-content>
