@@ -1,0 +1,33 @@
+<div>
+    <mat-card>
+        <mat-card-header>
+            Please provide connection details
+        </mat-card-header>
+        <mat-card-content>
+            <div class="row-1">
+                <span class="server">Server:
+                    <input placeholder="eg. 10.11.12.13" required>
+                </span>
+
+                <span class="port">Port:
+                    <input placeholder="eg. 8080" required>
+                </span>
+
+            </div>
+            <div class="row-2">
+                <span class="row-2-message">Enter information to sign in to the server:</span>
+                <span class="row-2-username">Username:
+                    <input placeholder="Username" required>
+                </span>
+                <span>Password:
+                    <input placeholder="Password" required>
+                </span>
+            </div>
+            <div class="btns">
+                <button mat-button>Test</button>
+                <button mat-button (click)="next()">Connect</button>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+</div>
