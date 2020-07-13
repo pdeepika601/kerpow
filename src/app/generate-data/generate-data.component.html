@@ -10,9 +10,11 @@
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
         <ng-template matStepLabel>Select Table</ng-template>
+        <app-select-table (goForward)="next($event)" ></app-select-table>
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
         <ng-template matStepLabel>Select Options</ng-template>
+        <app-select-column [tableDetails]="tableDetails"></app-select-column>
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
         <ng-template matStepLabel>Confirm Table data</ng-template>

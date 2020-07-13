@@ -1,0 +1,36 @@
+<div>
+  <mat-card>
+    <mat-card-content>
+      <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="table_name">
+          <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.table_name}}</mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="column_number">
+          <mat-header-cell *matHeaderCellDef>Number of columns</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.column_number}}</mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="record_number">
+          <mat-header-cell *matHeaderCellDef>Number of records</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.record_number}}</mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="created_date">
+          <mat-header-cell *matHeaderCellDef>Date created</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.created_date}}</mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="update_date">
+          <mat-header-cell *matHeaderCellDef>Last Updated Date</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{element.update_date}}</mat-cell>
+        </ng-container>
+      
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row,columns:displayedColumns;" (click)="getRecord(row)"></mat-row>
+      </mat-table>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -11,6 +11,7 @@ export class GenerateDataComponent implements OnInit {
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  tableDetails:any;
   @ViewChild('stepper', { static: false }) private myStepper: MatStepper;
 
   constructor(private _formBuilder: FormBuilder) { }
@@ -24,8 +25,9 @@ export class GenerateDataComponent implements OnInit {
     });
   }
 
-  next() {
+  next($event) {
     this.myStepper.next();
+    this.tableDetails = $event;
   }
 
   previous(){
